@@ -90,7 +90,7 @@ function listFeeds() {
 function addFeedItem(feed) {
 	var template = $('#feed').html();
     var html = Mustache.to_html(template, {
-    	title : feed.title,
+    	title : feed.title != "" ? feed.title : feed.link,
     	link : feed.link,
     });
     $("#feeds-list").append(html);
@@ -191,10 +191,11 @@ $(function() {
 
 		// check if the input isn't empty and is url
 		if($("#feed-url")[0].checkValidity()) {
-			var feed = new Feed($("#feed-url").val());
+			var feedURL = $("#feed-url").val();
 
 			// load the feed
-			getFeed(feed, function(feedJSON) {
+			getFeed(feedURL, function(feedJSON) {
+				var feed = new Feed("feedURL")
 				feed.title = feedJSON.title;
 
 				// save the feed
@@ -206,6 +207,7 @@ $(function() {
 					}
 				});
 			});
+		
 
 			// clear the input
 			$("#feed-url").val("");
