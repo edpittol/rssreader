@@ -13,7 +13,7 @@
   
   <!-- Util CSS: some extra tricks -->
   <link rel="stylesheet" href="util.css">
-  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="fonts.css">  
 
   <link rel="stylesheet" href="style/app.css">
   
@@ -41,7 +41,7 @@
 	  	</header>
 	  	
 	  	<section data-type="list">
-	  		<input id="feed-url" type="url" placeholder="Insert Feed" required="true">
+	  		<input id="feed-url" type="url" placeholder="Insert a feed URL" required="true">
 	  		<button id="add-feed">Add</button>
 	  		<ul id="feeds-list"></ul>
 		</section>
@@ -82,14 +82,10 @@
 	<script id="feed" type="text/template">
 		<li class="feed">
 	  		<strong class="title">{{ title }}</strong>
-	  		<ul class="feed-actions">
-	  			<li class="action-icon browser-forward">
-	        		<a class="feed-see" href="{{ link }}">Ver</a>
-	  			</li>
-	  			<li class="action-icon delete">
-	        		<a class="feed-delete" href="#">Excluir</a>
-	        	</li>
-        	</ul>
+	  		<div class="feed-actions">
+	        	<a class="feed-see" href="{{ link }}">Ver</a>
+	        	<a class="feed-delete" href="#">Excluir</a>
+        	</div>
         	<span class="feed-link">{{ link }}</span>
 	  	</li>
 	</script>

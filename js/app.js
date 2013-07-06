@@ -38,7 +38,7 @@ function startApp() {
 		}
 	}
 	listFeeds();
-	showScreen("start");
+	showScreen("feeds");
 }
 
 /**

@@ -26,7 +26,7 @@
 }
 
 /* show only the first screen */
-section[role="region"]:not(:first-child) {
+section[role="region"]:not(#start) {
   display: none;
 }
 
@@ -50,4 +50,9 @@ section[role="region"]:not(:first-child) {
 
 .feed-link {
   display: none;
+}
+
+.feed-actions a {
+  color: #000;
+  text-decoration: none;
 }
