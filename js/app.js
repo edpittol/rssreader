@@ -207,13 +207,13 @@ $(function() {
 					}
 				});
 			});
-		
 
 			// clear the input
 			$("#feed-url").val("");
 
 			// list feeds
 			listFeeds();
+
 		} else {
 			alert("Insert a valid URL.");
 		}
