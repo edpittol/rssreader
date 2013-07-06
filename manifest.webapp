@@ -6,5 +6,12 @@
     "name": "Eduardo Pittol",
     "url": "http://github.com/edpittol"
   },
-  "default_locale": "pt"
+  "default_locale": "pt",
+  "icons": {
+  	"32" : "/img/icon/16.png",
+  	"48" : "/img/icon/48.png",
+  	"64" : "/img/icon/64.png",
+  	"128" : "/img/icon/128.png",
+  	"256" : "/img/icon/256.png"
+  }
 }
