@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <title>Building blocks demo</title>
+  <!-- Building blocks -->
+  <link rel="stylesheet" href="style/app.css">
+  <link rel="stylesheet" href="style/action_menu.css">
+  <link rel="stylesheet" href="style/buttons.css">
+  <link rel="stylesheet" href="style/confirm.css">
+  <link rel="stylesheet" href="style/edit_mode.css">
+  <link rel="stylesheet" href="style/headers.css">
+  <link rel="stylesheet" href="style/input_areas.css">
+  <!--link rel="stylesheet" href="style/responsive.css"-->
+  <link rel="stylesheet" href="style/status.css">
+  <link rel="stylesheet" href="style/switches.css">
+  <!--link rel="stylesheet" href="style_unstable/drawer.css"-->
+  <link rel="stylesheet" href="style_unstable/lists.css">
+  <link rel="stylesheet" href="style_unstable/progress_activity.css">
+  <link rel="stylesheet" href="style_unstable/scrolling.css">
+  <link rel="stylesheet" href="style_unstable/seekbars.css">
+  <link rel="stylesheet" href="style_unstable/tabs.css">
+  <link rel="stylesheet" href="style_unstable/toolbars.css">
+  
+  <link rel="stylesheet" href="transitions.css">
+  
+  <!-- Util CSS: some extra tricks -->
+  <link rel="stylesheet" href="util.css">
+  <link rel="stylesheet" href="fonts.css">
+
+  <!-- Additional markup to make Building Blocks kind of cross browser -->
+  <link rel="stylesheet" href="cross_browser.css">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.jfeed.pack.js"></script>
+  <script type="text/javascript" src="js/mustache.js"></script>
+  <script type="text/javascript" src="js/model.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+  	google.load("feeds", "1");
+  </script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+</head>
+<body>
+
+	<section id="feed-items" role="region" class="view">
+	  	<header>
+	  		<button id="back"><span class="icon icon-back">menu</span></button>
+	  		<h1>RSS Reader</h1>
+	  	</header>
+	  	
+	  	<section data-type="list">
+	  		<header id="feed-title"></header>
+	  		<button id="update-feed">Update</button>
+	  		<ul id="items"></ul>
+		</section>
+	</section>
+	
+	<section id="feeds" role="region" class="view">
+	  	<header>
+	  		<h1>Feeds</h1>
+	  	</header>
+	  	
+	  	<section data-type="list">
+	  		<input id="feed-url" type="url" placeholder="Insert Feed" required="true">
+	  		<button id="add-feed">Add</button>
+	  		<ul id="feeds-list"></ul>
+		</section>
+	</section>
+	
+	<!-- Templates -->
+	<script id="feed" type="text/template">
+		<li class="feed">
+	  		<strong class="title">{{ name }}</strong>
+	  		<div class="feed-actions">
+	        	<a class="feed-see" href="#" data-link="{{ link }}">Ver</a>
+	        	<a class="feed-delete" href="#">Excluir</a>
+        	</div>
+	  	</li>
+	</script>
+	
+	<script id="feed-item" type="text/template">
+		<li>
+			<a href="{{ link }}">{{ title }}</a>
+		</li>
+	</script>
+</body>
+</html>
+

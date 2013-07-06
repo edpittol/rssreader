@@ -1,0 +1,10 @@
+{
+  "name": "RSS Reader",
+  "description": "RSS Reader using Building Blocks (http://buildingfirefoxos.com)",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Eduardo Pittol",
+    "url": "http://github.com/edpittol"
+  },
+  "default_locale": "pt"
+}
